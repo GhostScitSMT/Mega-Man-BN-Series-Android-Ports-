@@ -32,22 +32,6 @@ The intended handheld layout puts GBA **A** on the right face button and **B** o
 
 APK signatures, 16 KB alignment, and edition-specific cartridge header validation were checked. Installation, gameplay, controls, and save persistence on Android hardware are pending. Link-cable and multiplayer are outside this preview.
 
-## Build from source
-
-Use Python 3.9+, JDK 17, Android SDK Platform 35 and Build-Tools 35, Android NDK r28c, CMake 3.22+, and Ninja. Download and extract [SDL 2.32.10](https://github.com/libsdl-org/SDL/releases/tag/release-2.32.10). The source archive includes the modified mGBA tree under `mgba-android/`.
-
-Create an APK signing keystore and set `BNGBA_KEYSTORE_PASSWORD` in the process environment. Set `BNGBA_KEY_PASSWORD` if the key has a different password. Keep the same keystore to sign future in-place updates.
-
-```sh
-python build.py --sdl2 /path/to/SDL2-2.32.10 \
-  --ndk /path/to/android-ndk-r28c --jdk /path/to/jdk-17 \
-  --android-jar /path/to/sdk/platforms/android-35/android.jar \
-  --build-tools /path/to/sdk/build-tools/35.0.0 \
-  --keystore /path/to/release.p12 --key-alias bngba --output dist
-```
-
-The build writes eleven signed APKs, `MANIFEST.json`, and `SHA256SUMS.txt`. The GitHub release assets should include the individual APKs, the corresponding source archive, and the checksums.
-
 ## Credits
 
 Android packaging and edition launchers by GhostScitSMT. The runtime uses [mGBA](https://github.com/mgba-emu/mgba) by Jeffrey Pfau and contributors under MPL 2.0, the [Gitsnup SDL2 Android frontend](https://github.com/Gitsnup/mgba-android/tree/8099fa2e0ec394ab57f99babec851480079f7f99), and [SDL2](https://github.com/libsdl-org/SDL/releases/tag/release-2.32.10) under the zlib license. See `NOTICE.txt` and the license files. Mega Man and the original games belong to Capcom.
