@@ -1,6 +1,6 @@
-Battle Network GBA for Android
+# Battle Network GBA for Android
 
-**0.1.0 preview** · Android 7.0 or later · ARM64
+**v0.2.2 preview** · Android 7.0 or later · ARM64
 
 Unofficial standalone Android apps for the ten GBA editions of Mega Man Battle Network 1–6, plus Mega Man Battle Chip Challenge. Each APK has its own launcher and private save storage. The apps use the mGBA emulator with an SDL2 Android frontend. Commercial ROMs and the Nintendo GBA BIOS are absent from the download.
 
@@ -24,13 +24,21 @@ Cartridge IDs are based on the [Game Boy hardware database](https://gbhwdb.gekki
 
 ## Install and play
 
-1. Download and install the APK for your edition. If Android asks, allow installs from the app you opened the APK with.
-2. Open the game’s launcher and choose **Import GBA ROM**. Select your own matching, extracted `.gba` cartridge dump. The launcher checks the header and copies the file to private storage.
-3. Select **Play**. Use the controller or touch controls. The **TOUCH** button toggles the on-screen buttons, and Android Back returns to the launcher.
+1. Download the APK for your edition from [v0.2.2 Releases](https://github.com/GhostScitSMT/Mega-Man-BN-Series-Android-Ports-/releases/tag/V0.2.2). If you already have a preview installed, choose **Update** to keep your imported game and saves. If Android asks, allow installs from the app you opened the APK with.
+2. Open the game’s launcher and choose **Choose game file**. Select your own matching `.gba` cartridge dump or a ZIP containing it. The launcher checks the header and copies the file to private storage.
+3. Select **Play**. Use the controller or touch controls. The **TOUCH** button toggles the on-screen buttons, and **MENU** pauses the game and lets you return to the launcher.
 
-The intended handheld layout puts GBA **A** on the right face button and **B** on the bottom. Use the game’s ordinary save function. Each installed edition maintains separate saves, with separate save files for each cartridge region. Existing collection or recomp saves are not imported automatically.
+The handheld layout puts GBA **A** on the right face button and **B** on the bottom. Use the game’s ordinary save function. **Save files** in the launcher imports and exports `.sav` battery saves. Each installed edition maintains separate saves, with separate save files for each cartridge region. Existing collection or recomp saves are not imported automatically.
 
-APK signatures, 16 KB alignment, and edition-specific cartridge header validation were checked. Installation, gameplay, controls, and save persistence on Android hardware are pending. Link-cable and multiplayer are outside this preview.
+## Optional GBA BIOS
+
+Games can run with just a matching ROM. mGBA uses built-in routines to handle GBA startup and system calls when you play without an imported BIOS. An original GBA BIOS dump is recommended if you want startup and system behavior closer to the real hardware.
+
+To add one, open **GBA BIOS → Import BIOS** and select your own standard 16 KB dump. The app verifies the file and enables it for that edition. Use the same menu to disable it or enable the original startup animation. The animation is off by default. Each standalone app stores its BIOS and settings separately.
+
+## Test status
+
+On AYN Thor, Battle Network 1 showed the new BIOS menu and booted without a BIOS. Invalid BIOS files were rejected in validation tests. Booting with a valid BIOS and gameplay in the other editions still need testing. APK signatures and alignment were verified for all 11 builds.
 
 ## Credits
 
