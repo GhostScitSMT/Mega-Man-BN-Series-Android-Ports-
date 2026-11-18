@@ -36,10 +36,6 @@ Games can run with just a matching ROM. mGBA uses built-in routines to handle GB
 
 To add one, open **GBA BIOS → Import BIOS** and select your own standard 16 KB dump. The app verifies the file and enables it for that edition. Use the same menu to disable it or enable the original startup animation. The animation is off by default. Each standalone app stores its BIOS and settings separately.
 
-## Test status
-
-On AYN Thor, Battle Network 1 showed the new BIOS menu and booted without a BIOS. Invalid BIOS files were rejected in validation tests. Booting with a valid BIOS and gameplay in the other editions still need testing. APK signatures and alignment were verified for all 11 builds.
-
 ## Credits
 
 Android packaging and edition launchers by GhostScitSMT. The runtime uses [mGBA](https://github.com/mgba-emu/mgba) by Jeffrey Pfau and contributors under MPL 2.0, the [Gitsnup SDL2 Android frontend](https://github.com/Gitsnup/mgba-android/tree/8099fa2e0ec394ab57f99babec851480079f7f99), and [SDL2](https://github.com/libsdl-org/SDL/releases/tag/release-2.32.10) under the zlib license. See `NOTICE.txt` and the license files. Mega Man and the original games belong to Capcom.
