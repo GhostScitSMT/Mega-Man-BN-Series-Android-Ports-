@@ -24,7 +24,7 @@ Cartridge IDs are based on the [Game Boy hardware database](https://gbhwdb.gekki
 
 ## Install and play
 
-1. Download the APK for your edition from [v0.2.2 Releases](https://github.com/GhostScitSMT/Mega-Man-BN-Series-Android-Ports-/releases/tag/V0.2.2). If you already have a preview installed, choose **Update** to keep your imported game and saves. If Android asks, allow installs from the app you opened the APK with.
+1. Download the APK for your version, If you already have a preview installed, choose **Update** to keep your imported game and saves. If Android asks, allow installs from the app you opened the APK with.
 2. Open the game’s launcher and choose **Choose game file**. Select your own matching `.gba` cartridge dump or a ZIP containing it. The launcher checks the header and copies the file to private storage.
 3. Select **Play**. Use the controller or touch controls. The **TOUCH** button toggles the on-screen buttons, and **MENU** pauses the game and lets you return to the launcher.
 
